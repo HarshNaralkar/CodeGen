@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🥷BarCode Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="form-container">
+      <!-- <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div> -->
+
+      <h2>Select Form</h2>
+      <div class="radio-input">
+        <label class="label">
+          <input type="radio" id="barcode" name="codeType" value="barcode" checked=""/>
+          <p class="text">Bar LineCode</p>
+        </label>
+        <label class="label">
+          <input type="radio" id="qrcode" name="codeType" value="qrcode"/>
+          <p class="text">QR Code</p>
+        </label>
+      </div>
+
+      <h2>Enter Code Here</h2>
+      <input type="text" id="codeInput" placeholder="Enter code here...">
+
+      <button onclick="addCode()" class="button" data-text="Awesome">
+        <span class="actual-text">&nbsp;AddCode&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;AddCode&nbsp;</span>
+      </button>
+    </div>
+
+    <div class="preview-container">
+      <h2>Preview</h2>
+      <div class="preview-box" id="previewBox"></div>
+      <button class="print-btn" onclick="printPreview()">Print</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-media">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://github.com/HarshNaralkar" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>&copy; 2025 Code Generator | Designed by Harsh Naralkar</p>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
