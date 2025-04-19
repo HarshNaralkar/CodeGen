@@ -17,7 +17,8 @@ function addCode() {
         format: "CODE128",
         displayValue: true,
         fontSize: 14,
-        height: 60
+        height: 60,
+        width: 3.0
       });
     } else if (codeType === "qrcode") {
       const qr = new QRious({ value: codeValue, size: 300 });
@@ -35,7 +36,13 @@ function addCode() {
     }
   
     document.getElementById("codeInput").value = "";
+    document.getElementById("previewCard").style.display = "block";
   }
+  
+  document.getElementById("clearPreviewBtn").addEventListener("click", function () {
+    const previewBox = document.getElementById("previewBox");
+    previewBox.innerHTML = ""; 
+  });
   
   function printPreview() {
     const printContent = document.getElementById("previewBox").innerHTML;
